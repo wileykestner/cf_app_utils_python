@@ -1,0 +1,84 @@
+{
+  "elephantsql" : [
+    {
+      "name" : "my-database-name",
+      "label" : "elephantsql",
+      "tags" : [
+        "New Product",
+        "Data Stores",
+        "relational",
+        "Data Store",
+        "postgresql"
+      ],
+      "plan" : "turtle",
+      "credentials" : {
+        "uri" : "postgres://mypostgresusername:mypostgrespassword@mypostgres.domain.com:5432/mydatabasename",
+        "max_conns" : "5"
+      }
+    }
+  ],
+  "rediscloud" : [
+    {
+      "name" : "my-redis-instance-name",
+      "label" : "rediscloud",
+      "tags" : [
+        "redis",
+        "key-value",
+        "Data Stores",
+        "Data Store"
+      ],
+      "plan" : "25mb",
+      "credentials" : {
+        "port" : "15348",
+        "hostname" : "my.redis.domain.com",
+        "password" : "my-redis-password"
+      }
+    }
+  ],
+  "blue_service" : [
+    {
+      "name" : "blue-service-instance-one-name",
+      "label" : "colorservice",
+      "tags" : [
+        "blue",
+        "color"
+      ],
+      "plan" : "25mb",
+      "credentials" : {
+        "port" : "851",
+        "hostname" : "my.blue.one.com",
+        "password" : "my-blue-one-password"
+      }
+    },
+    {
+      "name" : "blue-service-instance-two-name",
+      "label" : "sillyservice",
+      "tags" : [
+        "blue",
+        "color"
+      ],
+      "plan" : "25mb",
+      "credentials" : {
+        "port" : "852",
+        "hostname" : "my.blue.two.com",
+        "password" : "my-blue-two-password"
+      }
+    }
+  ],
+  "red_service" : [
+    {
+      "name" : "red-service-instance-one-name",
+      "label" : "colorservice",
+      "tags" : [
+        "red",
+        "color"
+      ],
+      "plan" : "25mb",
+      "credentials" : {
+        "port" : "451",
+        "hostname" : "my.red.one.com",
+        "password" : "my-red-one-password"
+      }
+    }
+  ]
+}
