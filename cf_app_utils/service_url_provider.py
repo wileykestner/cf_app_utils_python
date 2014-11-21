@@ -1,5 +1,3 @@
-import json
-import os
 from urlparse import ParseResult
 from cf_app_utils.credentials_locator import CredentialsLocator
 from cf_app_utils.service_locator import ServiceLocator
@@ -8,8 +6,8 @@ from cf_app_utils.service_locator import ServiceLocator
 class ServiceURLProvider(object):
 
     @staticmethod
-    def provider(services=None):
-        services = services or json.loads(os.environ['VCAP_SERVICES'])
+    def provider(services):
+        assert services
         service_locator = ServiceLocator(services)
         credentials_locator = CredentialsLocator(service_locator)
         return ServiceURLProvider(credentials_locator)

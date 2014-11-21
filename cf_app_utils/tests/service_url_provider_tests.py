@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from cf_app_utils.service_url_provider import ServiceURLProvider
 
@@ -29,10 +28,3 @@ class TestServiceURLProviderWithServices(unittest.TestCase):
 
         self.assertIsNone(url)
 
-
-class TestWithEnvironmentVariableSetup(TestServiceURLProviderWithServices):
-    def setUp(self):
-        with open("fixtures/vcap_services_example.json") as json_file:
-            services_string = json_file.read()
-            os.environ['VCAP_SERVICES'] = services_string
-            self.subject = ServiceURLProvider.provider()
