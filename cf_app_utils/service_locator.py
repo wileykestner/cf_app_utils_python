@@ -2,7 +2,7 @@ import itertools
 
 
 class ServiceLocator(object):
-    def __init__(self, services=None):
+    def __init__(self, services):
         assert services
         self.services = services
 
